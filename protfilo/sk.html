@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+        .terms {
+            margin-bottom: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+   
+<form class="form"action="https://api.web3forms.com/submit" method="POST">
+     <div class="container">
+         <h2>Registration Form</h2>
+    
+          <input type="hidden" name="access_key" value="62219a30-531c-4789-9bd5-825f0b43a1f4">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required>
+
+          <label for="lastName">Last Name</label>
+         <input type="text" id="lastName" name="lastName" required>
+
+          <label for="fatherName">Father's Name</label>
+          <input type="text" id="fatherName" name="fatherName" required>
+
+          <label for="motherName">Mother's Name</label>
+           <input type="text" id="motherName" name="motherName" required>
+
+           <div class="checkbox-group">
+              <div>
+                 <input type="checkbox" id="indian" name="nationality" value="Indian" onclick="toggleCheckbox(this)">
+                <label for="indian">Indian</label>
+              </div>
+               <div>
+                  <input type="checkbox" id="other" name="nationality" value="Other" onclick="toggleCheckbox(this)">
+                  <label for="other">Other</label>
+                </div>
+           </div>
+
+          <label for="homeDistrict">Home District</label>
+          <input type="text" id="homeDistrict" name="homeDistrict" required>
+
+          <label for="homeAddress">Home Address</label>
+         <input type="text" id="homeAddress" name="homeAddress" required>
+
+          <label for="instituteName">Institute Name</label>
+          <input type="text" id="instituteName" name="instituteName" required>
+
+          <label for="instituteDistrict">Institute District</label>
+          <input type="text" id="instituteDistrict" name="instituteDistrict" required>
+
+          <label for="instituteAddress">Institute Address</label>
+          <input type="text" id="instituteAddress" name="instituteAddress" required>
+
+          <label for="branch">Branch</label>
+          <select id="branch" name="branch" required>
+              <option value="CSE">CSE</option>
+               <option value="CE">CE</option>
+            <option value="EE">EE</option>
+            <option value="EC">EC</option>
+            <option value="ME">ME</option>
+            <option value="ECE">ECE</option>
+            <option value="AI">AI</option>
+            <option value="I.SC">I.SC</option>
+            <option value="AE">AE</option>
+            <option value="FT">FT</option>
+          </select>
+
+           <label for="semester">Semester</label>
+           <select id="semester" name="semester" required>
+            <option value="1">1st Semester</option>
+            <option value="2">2nd Semester</option>
+            <option value="3">3rd Semester</option>
+            <option value="4">4th Semester</option>
+            <option value="5">5th Semester</option>
+            <option value="6">6th Semester</option>
+            <option value="7">7th Semester</option>
+            <option value="8">8th Semester</option>
+           </select>
+
+        <label for="classRollNumber">Class Roll Number</label>
+        <input type="text" id="classRollNumber" name="classRollNumber" required>
+
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="number" id="mobileNumber" name="mobileNumber" required>
+
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="confirmUsername">Confirm Username</label>
+        <input type="text" id="confirmUsername" name="confirmUsername" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <div class="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">All conditions accepted</label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="login-link">
+        <p>Already registered? <a href="login.html">Login</a></p>
+    </div>
+ </div>
+
+
+ <br><center><a href="index.html"><button><strong>Go to Home</strong></button><
+</body>
+</html>
